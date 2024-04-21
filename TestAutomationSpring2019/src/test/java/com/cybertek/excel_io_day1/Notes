@@ -1,0 +1,66 @@
+to fetch new remote branch: git fetch origin parallel
+to switch to the new branch: git checkout parallel
+    Today 8/21/2019
+    Agenda:
+        Excel file reading with java.
+We are using old testng framework, that has days packages under test.
+https://github.com/CybertekSchool/online-spring-2019-selenium-testng.git
+Name: online-spring-2019-selenium-testng
+Clone this project if you don't have it. But, you should have it because we used it a lot.
+In case you have issues, use any testng project.
+create a package excel_io_day1 under tests
+then create a class: ExcelReadDemo
+To read microsoft excel  files with java, we use Apache POI library.
+Library itself is not dependent from testng or junit or cucumber.
+First of all, people use excel files to store test data.
+So besides Scenario Outline and Cucumber Data Tables, in case of cucumber framework, we can excel files (.xls, .xlsx) to perform Data Driven Testing.
+Also, we can use excel files to store data.
+For example: to record test results.
+If you gonna join insurance or financial company, you will have to deal with excel files.
+CSV it's not a CVS
+https://poi.apache.org <--- official web site
+<dependency>
+    <groupId>org.apache.poi</groupId> ---> for old formats, like .xls
+    <artifactId>poi</artifactId>
+    <version>4.1.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId> --> .xlsx
+    <version>4.1.0</version>
+</dependency>
+File can be located anywhere, but it's better to keep it under resources, since it's a test data.
+Go to announcement channel and download countries.xslx file.
+create a folder under test --> resources
+add file Countries.xslx to the resources
+In cucumber: feature file --> scenarios - test steps
+In excel file: Workbook --> Worksheet --> Row --> Cell
+One thing: whenever you read/write data from excel file, with java, close it first.
+Since we are targeting web automation, we gonna use excel reading + selenium.
+But, there is chance, that you can join position where you will do only back-end + excel.
+/**
+ * High level representation of a Excel workbook.  This is the first object most users
+ * will construct whether they are reading or writing a workbook.  It is also the
+ * top level object for creating new sheets/etc.
+ */
+public interface Workbook {
+
+}
+/**
+ * A <code>FileInputStream</code> obtains input bytes
+ * from a file in a file system. What files
+ * are  available depends on the host environment.
+ For XLS | .xls - which is old format of excel files
+ HSSFWorkbook wb = new HSSFWorkbook(inputStream);
+ For XLSX | .xlsx - which is new format of excel files
+ XSSFWorkbook wb2 = new XSSFWorkbook(inputStream);
+ To use both/any of them, we can:
+ Workbook wb3 = WorkbookFactory.create(inputStream);
+Indexes starts from 0. That's why we have 17 rows
+first row under index 0.
+@param rownum  row to get (0-based)
+@param cellnum  0 based column number
+  * @return short representing the last logical cell in the row <b>PLUS ONE</b>,
+     *   or -1 if the row does not contain any cells.
+     */
+       * @return last row contained on this sheet (0-based) - that means if we have 18 rows actually, it will return 17. Why? Because usually, first row used for column names not for actual data.

@@ -1,0 +1,90 @@
+Today is 6/26/2019
+
+ agenda:
+* quick review of yesterdays class
+*faker
+ What is WebElement
+ findElement(By.id)
+ findElement(By.name)
+ click()
+ sendKeys()
+
+ In Intellij, shortcut for importing: option+enter/ alt+enter
+
+ ON the planning meeting you are getting tickets that you will work on during the sprint. Every sprint you can handle 8 points. That means you will 3-4 tickets (jira issues)
+
+ Once sprint starts, you are picking one ticket and move it from to do to in progress.
+
+ Then you analyze your task to automate something.
+
+ You test manually first then you are starting writing automation scripts.
+
+ And usually, it starts from locating elements that you need to interact with. To do this, I use google chrome browser and dev tool and I inspect source code to create locators. Locator will help selenium to find element.
+
+ Since selenium doesn't see pages, it doesn't have eyes, it requires locators to find elements.
+
+
+ Selenium only needs html code to interact with it.
+
+Headless browsers don't need UI to run your selenium scripts.
+
+For example: PhantomJS, HTMLUnit, chrome browser can work in headless mode.
+
+What's the benefit? It's faster.
+
+
+WebElement object represents some kind of element on the page.
+
+Since WebElemnt is an interface, we cannot do:
+
+
+WebElement element = new WebElement() | It will not work
+
+instead
+
+we have to do:
+
+WebElement element = driver.findElement(By.locator(""));
+
+To create a web element, we need to find it first.
+
+To find it, we use findElement(), and this method takes object of By class. By stands for mechanism that used to locate elements within a document. I
+
+We will always type By.something.. By.id, By.xpath, By.cssSelector etc...
+
+
+That means, we tell selenium, based on what he must find element.
+
+We want to click on button, but selenium doesn't know where this button located automatically. That's why use locators.
+
+There are 8 locators:
+	id: is an attribute in HTML. id="value", then in the selenium code we will put By.id("value").
+	cssSelector:
+	xPath:
+	name:
+	tagName:
+	className:
+	linkText:
+	partialLinkText:
+
+
+we can click() on element
+
+How to  enter text?
+
+we will use method sendKeys("text");
+
+this method will help us to enter text.
+
+sendKeys("text" + Keys.Enter)
+sendKeys("text", Keys.Enter) <-- to enter text and hit enter button.
+
+clear() method that clears input text.
+
+ submitButton.submit(); // it works only with buttons. Click method is more flexible, but you can use it as an alternative for clicking on button.
+
+ StaleElementReferenceException: stale element reference: element is not attached to the page document
+
+
+ Or in other words - old element exception.
+ Once you find element, and page will refresh , you will get StaleElementReferenceException if you will try to interact with webelement again after refresh. Basically, selenium cannot find that element any more.

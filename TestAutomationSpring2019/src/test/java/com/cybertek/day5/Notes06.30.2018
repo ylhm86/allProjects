@@ -1,0 +1,45 @@
+Today is 6/30/2019
+
+BREAK TILL 2:02
+
+NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#woodenspoon"}
+
+This exception occurs when selenium cannot find element based on provided locator.
+
+Selenium doesn't wait by default, it doesn't have default implicit wait. So you will get an exception, once selenium will fail to allocate element on the page. This exception happens, even though your locator is correct. To prevent these failures, we use implicit and explicit wait.
+
+If locator is not unique, selenium will take first element.
+
+<h4 class="subheader">Welcome to the Secure Area. When you are done click logout below.</h4>
+
+driver.findElement(By.className("subheader"));
+
+Since there is no id and name, we can use class name to find this element. We need to find it in order to verify text. We checked class name, and looks like there is only one element with this class name. That means, we can use it.
+
+
+Locators - we use them (selenium) to find elements on the page.
+
+By.id -> the best way to find element, unless id is dynamic.
+if so, use Xpath.
+
+By.name -> name attribute sometimes is not unique, especially for radio buttons.
+
+By.tagName -> it refers to the HTML tag. If there are multiple elements with a same tag (for example <input>), then you will get first element in the list. Or you should you findElements and put your elements in the List<WebElement>. This locator is not very reliable for identifying unique elements.
+
+
+<h4 class="value">Text</h4>
+By.className -> in case of this locator, selenium will look for attribute value of class.   It's less likely unique, because class mostly used to style group of elements in CSS.
+
+<a class="button secondary radius" href="/logout"><i class="icon-2x icon-signout"> Logout</i></a>
+
+<a href="/abtest">A/B Testing</a>
+
+LinkText -> refers to the text of hyper link. If you see <a> tag, you can use this text for finding element by linkText.A/B Testing and Logout are link texts.
+
+By.partialLinkText -> same as linkText but text that you provide can be partial, not exactly the same. It's used when some part of hyperlink text is dynamic, and only some part is fixed. Based on this fixed part (text) you should be able to find element.
+
+
+StaleElementReferenceException means that selenium cannot find this element any more. Since after clicking button disappeared, selenium will not be able to find it.
+
+
+I had a text case, where I had to find all checkboxes, select all of them, and then verify that they were selected successfully after save. Since I had more that 40 checkboxes on the page, instead of creating one locator for every checkbox, I created a list of checkboxes, and found them all.

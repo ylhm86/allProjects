@@ -1,0 +1,39 @@
+
+Mekan Interview Questions:
+
+1.    How would you handle if 250/1000 test cases fail at once?
+2.     How do you increase the size of Heap memory?
+3.     How do you handle https certificates in Selenium?
+4.     Tell me test scenarios to test a text box?
+5.     You have two phones, how will you test these two phones, what will be your scenarios?
+6.    Get() and navigate() difference?
+7.    Should I invoke get() or navigate to()
+8.    What is implicitly wait and explicitly wait?
+9.    How do you handle Frame?
+10.    What are the different types of frames
+11.    Can you pull Web Element from frame?
+12.    How do you handle child windows?
+13.    You have three windows, from third child window can you go directly to parent window?
+14.    How do you handle HTTP certifications?
+15.    If you don’t want to see your hidden element, how to handle hidden elements?
+16.    Default for Boolean?
+17.    Java alerts can handle automatically? What is phrase of using?
+18.    What is shift Left in agile?
+19.    What stage do you start testing in Agile?
+20.    What is BDD? Where do you use it?
+21.    How do you Error handling? Something happened to the system or get stuck,
+       if you run that batch and if it stops what would you do?
+       How would you handle error that will appear in night time run of your test?
+22.    If you have 700 test cases how you would handle ?
+23.    Can you run the data?
+24.    Can you list the tasks, handle data management?
+25.    How do you make sure that your Automation covers every bugs?
+26.    Collections differences, what would you use to loop?
+27.    For loop and Iterator difference, advantage of iterator?
+28.    Rest and RestAssured difference
+29.    Singleton class, how do you create and specific what does it return?
+30.    Can you compare database methods with api methods?
+31.    What is advantage of using cucumber and rest assured together?
+32.    If somebody sends you jar executable file? If you run it and you get OutOfMemoryException
+33.    How you can resize heap?
+34.    Difference between put and post in API?

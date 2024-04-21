@@ -1,0 +1,26 @@
+Today is 8/3/2019
+Agenda:
+    New framework
+    TestNG xml runners
+    How to run specific xml from terminal
+    How to parameterize test
+    Data provider
+    How to talk about framework
+#############
+We will talk about testng.xml files.
+How to parameterize tests.
+If you are trying to enter null text, you will get:
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+How to create?
+Right click on the project -> new file -> runner.xml -> add heading <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" > and add suite. Inside a suite, we can create tests.
+We can create anything.xml in order to create runner for testng project. It's good practice to have smoketest.xml, regression.xml and some testngrunner/functionalrunner.xml.
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Login tests">
+    <test name="Login Tests">
+        <parameter name="username" value="salesmanager110"></parameter>
+        <parameter name="password" value="UserUser123"></parameter>
+        <classes>
+            <class name="com.vytrack.tests.components.login_navigation.LoginTests"/>
+        </classes>
+    </test>
+</suite>

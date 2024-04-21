@@ -1,0 +1,62 @@
+Date:   08/19/2019
+Agenda:
+    - Market preparation
+        - Java
+            - Data Structure (Arrays, ArrayList, Map, HashMap, TreeMap, Set, TreeSet, LinkeList)
+            - String Manipulation
+            - Loops
+            - Functions
+            - OOP Concept (Inheritance, Encapsulation, Abstraction, Polyporphism)
+            - Interface
+            - Static Keyword
+            - Overriding and overloading
+            - explain where do you use oop concept in your framework?
+        - Selenium WebDriver:
+            - Locators (ID, name, classname, tag, linktext, partial linktext, ccs selector, xpath)
+                - relative xpath
+                - absolute xpath
+            - dynomic elements (starts-with, ends-with, contains methods)
+            - how do you handle dropdowns in Selenium?
+            - iframes
+            - pop ups
+            - javaScript execuator
+            - JavaScript alerts
+            - WebTable (it is very important)
+            - Actions, alerts, hover over, double click
+        - Cucumber:
+            - mainly they ask about Senerio Outline, Data Driven Test,
+            - Cucumber Reporting
+            - Parallel Testing using cucumber
+            - Background
+        - SQL:
+            - Joints (Inner Joint, Outer join, right joins, left joins and full outer joins)
+            - Nested querries
+            - DDL
+                - Create
+                - Drop
+                - Truncate
+                - Alter
+            - DML:
+                - Select
+                - Insert
+                - Update
+                - Delete
+        - API:
+            - Manual API testing (POSTMAN)
+            - Automate POSTMAN
+            - RESTfull and RestAssured librarry
+                - GET
+                - PUT
+                - POST
+                - DELETE
+            - write an API test script where you validate the follwoing response that comes from your request;
+                - Status Code
+                - Headers
+                - Body
+            - POJO (Plane Old Java Object)
+            - JSON path
+            - How to convert JSON Response to Java Object and vice versa
+            - You need to know how to test an API test script
+    - Resume Types
+    - Java Interview common questions
+    - Other market related topics
